@@ -43,7 +43,7 @@ Specifically, this docker wrappers the following software:
 Please have a look in the [docker-compose/Sneaklardooon-only](docker-compose/Sneaklardooon-only) folder:
 
 * Make amendments to the ``docker-compose.yml`` file  as needed, taking care with the volume binds ensuring the chosen locations have sufficient storage.
-* Make amendments to the ``config/sneaker/config.json`` file, adding your DCS World servers in the same format.
+* Make amendments to the ``config/sneaker/config.json`` file, adding your DCS World servers in the same format. Also set ``maps.api_key`` to a [CARTO API key](https://carto.com/basemaps/apikey/) — the map basemap tiles will not render without one.
 * Copy  ``.env.example `` to ``.env`` and amend as required. If you want to validate the correct settings are applied you can run ``docker compose config`` to display what Docker will use.
 * To start the container, ensure you are in the [docker-compose/Sneaklardooon-only](docker-compose/Sneaklardooon-only) directory and then run the command ``docker compose up -d && docker logs -f sneaklardooon``.
 * Check the shown logs look ok and navigate to the chosen host server's ports in your web browser. e.g. if on your local machine, http://localhost:3883/ and http://localhost:7788
