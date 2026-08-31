@@ -6,5 +6,5 @@
 	url = https://github.com/team-limakilo/jambon.git
 [submodule "sneaker"]
 	path = sneaker
-	url = https://github.com/Aterfax/sneaker.git
+	url = https://github.com/ctartamella/sneaker.git
 	branch = master
