@@ -47,10 +47,8 @@ jobs:
             context: .
             push: true
             tags: |
-              aterfax/sneaklardooon:latest 
-              ghcr.io/aterfax/sneaklardooon:latest
-              aterfax/sneaklardooon:${{ env.DATE }}
-              ghcr.io/aterfax/sneaklardooon:${{ env.DATE }}
+              ${{ secrets.DOCKERHUB_REPONAME }}:latest
+              ${{ secrets.DOCKERHUB_REPONAME }}:${{ env.DATE }}
 
         - name: Image digest
           run: echo ${{ steps.docker_build.outputs.digest }}
